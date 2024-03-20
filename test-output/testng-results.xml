@@ -1,41 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-20T03:25:30 AST" name="Default suite" finished-at="2024-03-20T03:25:33 AST" duration-ms="3380">
+  <suite started-at="2024-03-21T02:30:32 AST" name="Default suite" finished-at="2024-03-21T02:30:41 AST" duration-ms="8504">
     <groups>
     </groups>
-    <test started-at="2024-03-20T03:25:30 AST" name="Default test" finished-at="2024-03-20T03:25:33 AST" duration-ms="3380">
-      <class name="HomePage.HomePageTestCases">
-        <test-method is-config="true" signature="mySetuo()[pri:0, instance:HomePage.HomePageTestCases@4c2cc639]" started-at="2024-03-20T03:25:30 AST" name="mySetuo" finished-at="2024-03-20T03:25:33 AST" duration-ms="3143" status="PASS">
+    <test started-at="2024-03-21T02:30:32 AST" name="Default test" finished-at="2024-03-21T02:30:41 AST" duration-ms="8504">
+      <class name="HotelTest.BookingHotelTestCases">
+        <test-method is-config="true" signature="mySetup()[pri:0, instance:HotelTest.BookingHotelTestCases@4218500f]" started-at="2024-03-21T02:30:32 AST" name="mySetup" finished-at="2024-03-21T02:30:36 AST" duration-ms="3813" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- mySetuo -->
-        <test-method signature="CheckDepartureDate()[pri:0, instance:HomePage.HomePageTestCases@4c2cc639]" started-at="2024-03-20T03:25:33 AST" name="CheckDepartureDate" finished-at="2024-03-20T03:25:33 AST" duration-ms="74" status="PASS">
+        </test-method> <!-- mySetup -->
+        <test-method signature="SelectCityRandomly()[pri:1, instance:HotelTest.BookingHotelTestCases@4218500f]" started-at="2024-03-21T02:30:36 AST" name="SelectCityRandomly" finished-at="2024-03-21T02:30:37 AST" duration-ms="583" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CheckDepartureDate -->
-        <test-method signature="CheckHotelTab()[pri:0, instance:HomePage.HomePageTestCases@4c2cc639]" started-at="2024-03-20T03:25:33 AST" name="CheckHotelTab" finished-at="2024-03-20T03:25:33 AST" duration-ms="33" status="PASS">
+        </test-method> <!-- SelectCityRandomly -->
+        <test-method signature="SelectNumberOfVisitorsRandomly()[pri:2, instance:HotelTest.BookingHotelTestCases@4218500f]" started-at="2024-03-21T02:30:37 AST" name="SelectNumberOfVisitorsRandomly" finished-at="2024-03-21T02:30:41 AST" duration-ms="3997" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CheckHotelTab -->
-        <test-method signature="CheckQitafLogo()[pri:0, instance:HomePage.HomePageTestCases@4c2cc639]" started-at="2024-03-20T03:25:33 AST" name="CheckQitafLogo" finished-at="2024-03-20T03:25:33 AST" duration-ms="32" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CheckQitafLogo -->
-        <test-method signature="CheckTheContactNumber()[pri:0, instance:HomePage.HomePageTestCases@4c2cc639]" started-at="2024-03-20T03:25:33 AST" name="CheckTheContactNumber" finished-at="2024-03-20T03:25:33 AST" duration-ms="23" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CheckTheContactNumber -->
-        <test-method signature="CheckTheDefaultCurrency()[pri:0, instance:HomePage.HomePageTestCases@4c2cc639]" started-at="2024-03-20T03:25:33 AST" name="CheckTheDefaultCurrency" finished-at="2024-03-20T03:25:33 AST" duration-ms="20" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CheckTheDefaultCurrency -->
-        <test-method signature="CheckTheDefaultLanguage()[pri:0, instance:HomePage.HomePageTestCases@4c2cc639]" started-at="2024-03-20T03:25:33 AST" name="CheckTheDefaultLanguage" finished-at="2024-03-20T03:25:33 AST" duration-ms="20" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CheckTheDefaultLanguage -->
-      </class> <!-- HomePage.HomePageTestCases -->
+        </test-method> <!-- SelectNumberOfVisitorsRandomly -->
+      </class> <!-- HotelTest.BookingHotelTestCases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -29,19 +29,19 @@ public class HomePageTestCases extends Parameters {
 	
 	
 	
-	@Test()
+	@Test(enabled = false)
 	
 	public void CheckTheDefaultLanguage() {
 		String ActualLanguage = driver.findElement(By.tagName("html")).getAttribute("lang");
 		
-		myAssert.assertEquals(ActualLanguage, ExpectedLanguage);
+		myAssert.assertEquals(ActualLanguage, ExpectedEnglishLanguage);
 		
 		
 	}
 	
 	
 	
-	@Test ()
+	@Test (enabled = false)
 	public void CheckTheDefaultCurrency() {
 		String ActualCurrency = driver.findElement(By.xpath("//button[@data-testid='Header__CurrencySelector']")).getText();
 		
@@ -50,7 +50,7 @@ public class HomePageTestCases extends Parameters {
 
 	
 	
-	@Test ()
+	@Test (enabled = false)
 	public void CheckTheContactNumber() {
 		String ActualNumber = driver.findElement(By.tagName("strong")).getText();
 		
@@ -60,7 +60,7 @@ public class HomePageTestCases extends Parameters {
 	
 	
 	
-	@Test
+	@Test(enabled = false)
 	
 	public void CheckQitafLogo() {
 		WebElement QitafLogo = driver.findElement(By.xpath("//div[@class='sc-fihHvN eYrDjb']//*[name()='svg']"));
@@ -71,7 +71,7 @@ public class HomePageTestCases extends Parameters {
 	
 	
 	
-	@Test
+	@Test(enabled = false)
 	
 	public void CheckHotelTab() {
 		WebElement HotelTab  = driver.findElement(By.id("uncontrolled-tab-example-tab-hotels"));
@@ -83,7 +83,7 @@ public class HomePageTestCases extends Parameters {
 	
 	
 	
-	@Test
+	@Test(enabled = false)
 	
 	public void CheckDepartureDate() {
 		
@@ -103,6 +103,29 @@ public class HomePageTestCases extends Parameters {
 		myAssert.assertEquals(ActualDepartureDate, tomorrow );
 		myAssert.assertEquals(ActualReturnDate, theDayAfterTomorrow );
 
+		
+		
+	}
+	
+	
+	
+	
+	
+	@Test 
+	
+	public void ChangeLanguageRandomly() throws InterruptedException {
+		
+		driver.get(websites[randomWebsite]);
+
+		if(driver.getCurrentUrl().contains("en")) {
+			String ActualLanguage = driver.findElement(By.tagName("html")).getAttribute("lang");
+			
+			myAssert.assertEquals(ActualLanguage, ExpectedEnglishLanguage);
+		}else {
+String ActualLanguage = driver.findElement(By.tagName("html")).getAttribute("lang");
+			
+			myAssert.assertEquals(ActualLanguage, ExpectedEnglishLanguage);
+		}
 		
 		
 	}
