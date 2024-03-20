@@ -1,6 +1,7 @@
 package HomePage;
 
 import java.time.Duration;
+import java.time.LocalDate;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -14,7 +15,7 @@ public class HomePageTestCases extends Parameters {
 	public void mySetuo() {
 		driver.manage().window().maximize();
 		driver.get(URL);
-		//driver.manage().timeouts().implicitlyWait()
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 		
 		WebElement popMsg = driver.findElement(By.cssSelector(".sc-iBmynh.izXFRL"));
 		
@@ -55,6 +56,58 @@ public class HomePageTestCases extends Parameters {
 		
 		myAssert.assertEquals(ActualNumber, ExpectedNumber);
 	}
+	
+	
+	
+	
+	@Test
+	
+	public void CheckQitafLogo() {
+		WebElement QitafLogo = driver.findElement(By.xpath("//div[@class='sc-fihHvN eYrDjb']//*[name()='svg']"));
+		boolean ActualResult = QitafLogo.isDisplayed();
+		myAssert.assertEquals(ActualResult, true);
+	}
+	
+	
+	
+	
+	@Test
+	
+	public void CheckHotelTab() {
+		WebElement HotelTab  = driver.findElement(By.id("uncontrolled-tab-example-tab-hotels"));
+		String ActualResult = HotelTab.getAttribute("aria-selected");
+		myAssert.assertEquals(ActualResult, "false");
+		
+	}
+	
+	
+	
+	
+	@Test
+	
+	public void CheckDepartureDate() {
+		
+		LocalDate today = LocalDate.now();
+		
+		int tomorrow = today.plusDays(1).getDayOfMonth();
+		int theDayAfterTomorrow = today.plusDays(2).getDayOfMonth();
+		
+		
+		String ActualDeparture = driver.findElement(By.cssSelector("div[class='sc-iHhHRJ sc-kqlzXE blwiEW'] span[class='sc-cPuPxo LiroG']")).getText();
+		int ActualDepartureDate = Integer.parseInt(ActualDeparture);
+		
+		String ActualReturn = driver.findElement(By.cssSelector("div[class='sc-iHhHRJ sc-OxbzP edzUwL'] span[class='sc-cPuPxo LiroG']")).getText();
+		int ActualReturnDate = Integer.parseInt(ActualReturn);
+		
+		
+		myAssert.assertEquals(ActualDepartureDate, tomorrow );
+		myAssert.assertEquals(ActualReturnDate, theDayAfterTomorrow );
+
+		
+		
+	}
+	
+	
 	
 }
 
