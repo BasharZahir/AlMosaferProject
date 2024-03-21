@@ -1,6 +1,7 @@
 package HotelTest;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -64,6 +65,55 @@ WebElement popMsg = driver.findElement(By.cssSelector(".sc-iBmynh.izXFRL"));
 		WebElement SearchHotelButton = driver.findElement(By.xpath("//button[@data-testid='HotelSearchBox__SearchButton']"));
 		SearchHotelButton.click();
 	}
+	
+	
+	
+	
+	@Test(priority = 3)
+	
+	public void PageFullyCompleted() throws InterruptedException {
+		
+		Thread.sleep(10000);
+		
+		WebElement ResultsFound = driver.findElement(By.xpath("//span[@data-testid='HotelSearchResult__resultsFoundCount']"));
+		
+		String ResultsFoundAsText = ResultsFound.getText();
+			
+		myAssert.assertEquals(ResultsFoundAsText.contains("found"), true);
+	}
+	
+	
+	
+	
+	
+	@Test (priority = 4)
+	
+	public void SortPricesFromLowToHigh() {
+		
+		WebElement lowestPrice = driver.findElement(By.xpath("//button[@data-testid='HotelSearchResult__sort__LOWEST_PRICE']"));
+		lowestPrice.click();
+		
+		WebElement ContainerOfPrices = driver.findElement(By.xpath("//div[@class='sc-htpNat KtFsv col-9']"));
+		
+		List<WebElement> Prices = ContainerOfPrices.findElements(By.className("Price__Value"));
+		
+		int FirstPrice = Integer.parseInt(Prices.get(0).getText());
+		
+		int LastPrice =Integer.parseInt(Prices.get(Prices.size()-1).getText());
+		
+		myAssert.assertEquals(FirstPrice<LastPrice, true);
+
+	
+	
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 }

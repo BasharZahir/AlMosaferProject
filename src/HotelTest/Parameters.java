@@ -4,6 +4,7 @@ import java.util.Random;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.asserts.Assertion;
 
 public class Parameters {
 
@@ -23,6 +24,8 @@ public class Parameters {
 
 
 	int visitorNumber = rand.nextInt(2);
+	
+	Assertion myAssert = new Assertion();
 
 
 }

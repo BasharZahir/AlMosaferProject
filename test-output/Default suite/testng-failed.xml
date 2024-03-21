@@ -5,7 +5,7 @@
     <classes>
       <class name="HotelTest.BookingHotelTestCases">
         <methods>
-          <include name="myTest"/>
+          <include name="PageFullyCompleted"/>
           <include name="mySetup"/>
         </methods>
       </class> <!-- HotelTest.BookingHotelTestCases -->
